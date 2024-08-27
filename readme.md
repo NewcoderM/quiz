@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Cover](assets/images/cover2.jpeg)
+
 *Capitals of the World* is an interactive quiz application designed to test and improve users' knowledge of world capitals. The quiz presents users with questions where they must identify the capital cities of various countries, with answers represented by images. This engaging and educational tool is perfect for geography enthusiasts, students, or anyone looking to challenge themselves.
 
 The application offers a personalized experience by allowing users to input their name, tracks their score, and provides instant feedback on their answers. With its responsive design, *Capitals of the World* ensures a seamless experience across all devices, from desktops to mobile phones.
