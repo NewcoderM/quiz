@@ -116,7 +116,7 @@ button#next-question:hover {
     }
 
     .quiz-container {
-        height: 100%;
+        height: max-content;
     }
 }
 
@@ -132,6 +132,6 @@ button#next-question:hover {
     }
 
     .quiz-container {
-        height: 100%;
+        height: max-content;
     }
 }
