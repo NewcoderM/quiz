@@ -117,6 +117,7 @@ button#next-question:hover {
 
     .quiz-container {
         height: max-content;
+        margin-bottom: 20px;
     }
 }
 
@@ -133,5 +134,6 @@ button#next-question:hover {
 
     .quiz-container {
         height: max-content;
+        margin-bottom: 20px;
     }
 }
