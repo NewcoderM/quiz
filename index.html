@@ -12,10 +12,17 @@
 <body>
     <div class="quiz-container">
         <h1>Online Quiz <br>Capitals of the World</h1>
-        <div id="quiz"></div>
-        <div id="submit-button-container">
-            <button id="submit">Submit Quiz</button>
+
+        <div id="username-container">
+            <label for="username">Enter Your Username: </label>
+            <input type="text" id="username" placeholder="Your Name">
+            <button id="start-quiz">Start quiz</button>
         </div>
+        <div id="quiz" style="display: none;"></div>
+        
+        <button id="submit" style="display: none;">Submit Answer</button>
+        <button id="next-question" style="display: none;">Next Question</button>
+
         <div id="results"></div>
         <div id="continue"></div>
     </div>
