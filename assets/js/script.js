@@ -1,94 +1,28 @@
 const quizes = [
     {
         question: "What is the Capital of France?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Paris",
-        d: "Lesbon",
+        options: [
+            { img: "/assets/images/berlin.jpeg", answer: "a" },
+            { img: "/assets/images/berlin.jpeg", answer: "b" },
+            { img: "/assets/images/berlin.jpeg", answer: "c" },
+            { img: "/assets/images/berlin.jpeg", answer: "d" }
+        ],
         correct: "c"
-    },
-    {
-        question: "What is the Capital of Germany?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Paris",
-        d: "Lesbon",
-        correct: "a"
-    },
-    {
-        question: "What is the Capital of Italy?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Rome",
-        d: "Lesbon",
-        correct: "c"
-    },
-    {
-        question: "What is the Capital of Britain?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Paris",
-        d: "London",
-        correct: "d"
-    },
-    {
-        question: "What is the Capital of UAE?",
-        a: "Dubai",
-        b: "Madrid",
-        c: "Abu Dahbi",
-        d: "Lesbon",
-        correct: "c"
-    },
-    {
-        question: "What is the Capital of Kuwait?",
-        a: "Kuwait",
-        b: "Dubai",
-        c: "Ahmadi",
-        d: "Lesbon",
-        correct: "a"
-    },
-    {
-        question: "What is the Capital of Iraq?",
-        a: "Berlin",
-        b: "Bagdad",
-        c: "Basra",
-        d: "Dubai",
-        correct: "b"
-    },
-    {
-        question: "What is the Capital of Syria?",
-        a: "Berlin",
-        b: "Damascus",
-        c: "Paris",
-        d: "Aleppo",
-        correct: "b"
-    },
-    {
-        question: "What is the Capital of Spain?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Paris",
-        d: "Lesbon",
-        correct: "b"
-    },
-    {
-        question: "What is the Capital of India?",
-        a: "New Delhi",
-        b: "Mumbai",
-        c: "Paris",
-        d: "Lesbon",
-        correct: "a"
     }
 ];
 
+const usernameContainer = document.getElementById("username-container");
 const quiz = document.getElementById("quiz");
 const submitBtn = document.getElementById("submit");
-const submitBtnContainer = document.getElementById("submit-button-container");
+const nextBtn = document.getElementById("next-question");
 const restartBtn = document.getElementById("continue");
 const results = document.getElementById("results");
+const startQuizBtn = document.getElementById("start-quiz");
 
+let username;
 let currentQuestion = 0;
 let score = 0;
+let selectedAnswer = null;
 
 function loadQuiz () {
     const currentQuizData = quizes[currentQuestion];
@@ -96,47 +30,68 @@ function loadQuiz () {
         `<div>    
             <div class="question">${currentQuizData.question}</div>
             <ul class="answers">
-                <li><input class="list-input" type="radio" name="answer" value="a" />${currentQuizData.a}</li>
-                <li><input class="list-input" type="radio" name="answer" value="b" />${currentQuizData.b}</li>
-                <li><input class="list-input" type="radio" name="answer" value="c" />${currentQuizData.c}</li>
-                <li><input class="list-input" type="radio" name="answer" value="d" />${currentQuizData.d}</li>
+                ${currentQuizData.options.map(option => `
+                    <li>
+                        <img src="${option.img}" data-answer="${option.answer}" >
+                    </li>
+                `).join("")}
             </ul>
-        </div>`;
-}
-
-function getSelectedAnswer() {
-    const answers = document.querySelectorAll(`input[name="answer"]`);
-    console.log(answers)
-    let answer;
-
-    answers.forEach(ans => {
-        if(ans.checked) {
-            answer = ans.value;
-        }
+        </div>`; 
+        
+    const images = document.querySelectorAll(".answers img");
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            images.forEach(image => image.classList.remove("selected"));
+            img.classList.add("selected");
+            selectedAnswer = img.getAttribute("data-answer");
+        });
     });
 
-    return answer;
+    submitBtn.style.display = "block";
+    nextBtn.style.display = "none";
+}
+
+function showFeedback(isCorrect) {
+    results.innerHTML = `<p>${isCorrect ? `Correct` : `Incorrect` }</p>`;
+}
+
+function startQuiz() {
+    username = document.getElementById("username").value;
+    if(!username) {
+        alert("Please enter your username!");
+        return;
+    }
+
+    usernameContainer.style.display = "none";
+    quiz.style.display = "block";
+    loadQuiz();
 }
 
 submitBtn.addEventListener("click", () => {
-    const selectedAnswer = getSelectedAnswer();
-
     if(selectedAnswer) {
-        if(selectedAnswer === quizes[currentQuestion].correct) {
-            score++;
-        }
-        currentQuestion++;
-        if(currentQuestion < quizes.length) {
-            loadQuiz();
-        }   else {
-            quiz.innerHTML = "";
-            submitBtnContainer.innerHTML = "";
-            results.innerHTML = `You scored ${score} out of ${quizes.length}`;
-            restartBtn.innerHTML = `
-                <button onClick="window.location.reload()">Restart</button>
-            `;
-        }
+        const isCorrect = selectedAnswer == quizData[currentQuestion].correct;
+        if(isCorrect) score++;
+        showFeedback(isCorrect);
+        submitBtn.style.display = "none";
+        nextBtn.style.display = "block";
+    }   else {
+        alert("Please select an answer");
     }
 });
 
-loadQuiz();
+nextBtn.addEventListener("click", () => {
+    currentQuestion++;
+    results.innerHTML = "";
+    selectedAnswer = null;
+
+    if(currentQuestion < quizData.length) {
+        loadQuiz();
+    }   else {
+        quiz.innerHTML = "";
+        results.innerHTML = `<p>${username}, you scored ${score} out of ${quizData.length}!</p>`;
+        submitBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
+});
+
+startQuizBtn.addEventListener("click", startQuiz);

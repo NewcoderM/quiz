@@ -89,20 +89,3 @@ button#next-question {
 button#next-question:hover {
     background-color: #218838;
 }
-
-.answers img {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: border-color 0.3s ease;
-}
-
-.answers img:hover {
-    border-color: #007bff;
-}
-
-.answers img.selected {
-    border-color: #007bff;
-}
