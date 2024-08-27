@@ -107,7 +107,7 @@ button#next-question:hover {
 
 @media screen and (max-width: 768px) {
     .answers {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .answers img {
