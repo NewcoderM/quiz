@@ -28,17 +28,6 @@ body {
     margin-top: 10px;
 }
 
-.answers {
-    display: flex;
-    list-style: none;
-}
-
-@media screen and (max-width: 500px) {
-    .answers {
-        display: block;
-    }
-}
-
 .answers li {
     margin-bottom: 5px;
     margin: 0 10px;
@@ -88,4 +77,41 @@ button#next-question {
 
 button#next-question:hover {
     background-color: #218838;
+}
+
+.answers {
+    list-style: none;
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .answers {
+        display: block;
+    }
+
+    .quiz-container {
+        margin-top: 0px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 0px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.answers img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.answers img:hover {
+    border-color: #007bff;
+}
+
+.answers img.selected {
+    border-color: #007bff;
 }

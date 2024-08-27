@@ -1,4 +1,4 @@
-const quizes = [
+const quizData = [
     {
         question: "What is the Capital of France?",
         options: [
@@ -15,7 +15,7 @@ const usernameContainer = document.getElementById("username-container");
 const quiz = document.getElementById("quiz");
 const submitBtn = document.getElementById("submit");
 const nextBtn = document.getElementById("next-question");
-const restartBtn = document.getElementById("continue");
+const restartBtn = document.getElementById("restart");
 const results = document.getElementById("results");
 const startQuizBtn = document.getElementById("start-quiz");
 
@@ -25,7 +25,9 @@ let score = 0;
 let selectedAnswer = null;
 
 function loadQuiz () {
-    const currentQuizData = quizes[currentQuestion];
+    restartBtn.style.display = "none";
+
+    const currentQuizData = quizData[currentQuestion];
     quiz.innerHTML = 
         `<div>    
             <div class="question">${currentQuizData.question}</div>
@@ -91,6 +93,7 @@ nextBtn.addEventListener("click", () => {
         results.innerHTML = `<p>${username}, you scored ${score} out of ${quizData.length}!</p>`;
         submitBtn.style.display = "none";
         nextBtn.style.display = "none";
+        restartBtn.style.display = "block";
     }
 });
 
