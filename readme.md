@@ -1,4 +1,4 @@
-# Capitals of the World - Project Portfolio 1 - HTML & CSS
+# Capitals of the World
 
 ## Overview
 
