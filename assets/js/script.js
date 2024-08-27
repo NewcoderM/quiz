@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 const quizData = [
     {
         question: "What is the Capital of France?",

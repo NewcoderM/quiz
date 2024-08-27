@@ -84,7 +84,7 @@ button#next-question:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 2px;
     padding: 10px 0;
 }
 
