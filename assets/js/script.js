@@ -2,13 +2,53 @@ const quizData = [
     {
         question: "What is the Capital of France?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a" },
-            { img: "/assets/images/berlin.jpeg", answer: "b" },
-            { img: "/assets/images/berlin.jpeg", answer: "c" },
-            { img: "/assets/images/berlin.jpeg", answer: "d" }
+            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+        ],
+        correct: "d"
+    },
+    {
+        question: "What is the Capital of Germany?",
+        options: [
+            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+        ],
+        correct: "a"
+    },
+    {
+        question: "What is the Capital of India?",
+        options: [
+            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+        ],
+        correct: "b"
+    },
+    {
+        question: "What is the Capital of Syria?",
+        options: [
+            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "/assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
+        ],
+        correct: "d"
+    },
+    {
+        question: "What is the Capital of Italy?",
+        options: [
+            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "/assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
         ],
         correct: "c"
-    }
+    },
 ];
 
 const usernameContainer = document.getElementById("username-container");
@@ -35,6 +75,7 @@ function loadQuiz () {
                 ${currentQuizData.options.map(option => `
                     <li>
                         <img src="${option.img}" data-answer="${option.answer}" >
+                        <p>${option.name}</p>
                     </li>
                 `).join("")}
             </ul>

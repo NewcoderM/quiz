@@ -82,21 +82,10 @@ button#next-question:hover {
 .answers {
     list-style: none;
     display: flex;
-}
-
-@media screen and (max-width: 500px) {
-    .answers {
-        display: block;
-    }
-
-    .quiz-container {
-        margin-top: 0px;
-        background-color: white;
-        border-radius: 5px;
-        padding: 0px;
-        width: 100% !important;
-        height: 100% !important;
-    }
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 .answers img {
@@ -114,4 +103,35 @@ button#next-question:hover {
 
 .answers img.selected {
     border-color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .answers {
+        justify-content: space-between;
+    }
+
+    .answers img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quiz-container {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .answers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .answers img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .quiz-container {
+        height: 100%;
+    }
 }
