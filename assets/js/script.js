@@ -2,50 +2,50 @@ const quizData = [
     {
         question: "What is the Capital of France?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
-            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
-            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
-            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+            { img: "assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "assets/images/paris.jpeg", answer: "d", name: "Paris" }
         ],
         correct: "d"
     },
     {
         question: "What is the Capital of Germany?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
-            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
-            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
-            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+            { img: "assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "assets/images/paris.jpeg", answer: "d", name: "Paris" }
         ],
         correct: "a"
     },
     {
         question: "What is the Capital of India?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
-            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
-            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
-            { img: "/assets/images/paris.jpeg", answer: "d", name: "Paris" }
+            { img: "assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "assets/images/paris.jpeg", answer: "d", name: "Paris" }
         ],
         correct: "b"
     },
     {
         question: "What is the Capital of Syria?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
-            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
-            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
-            { img: "/assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
+            { img: "assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
         ],
         correct: "d"
     },
     {
         question: "What is the Capital of Italy?",
         options: [
-            { img: "/assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
-            { img: "/assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
-            { img: "/assets/images/rome.jpeg", answer: "c", name: "Rome" },
-            { img: "/assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
+            { img: "assets/images/berlin.jpeg", answer: "a", name: "Berlin" },
+            { img: "assets/images/delhi.jpeg", answer: "b", name: "Delhi" },
+            { img: "assets/images/rome.jpeg", answer: "c", name: "Rome" },
+            { img: "assets/images/damascus.jpeg", answer: "d", name: "Damascus" }
         ],
         correct: "c"
     },

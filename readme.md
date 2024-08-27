@@ -25,17 +25,6 @@ The application offers a personalized experience by allowing users to input thei
 - *Real-Time Feedback*
   - After selecting an answer, users receive immediate feedback indicating whether they were correct. This feature helps users learn and reinforces correct answers instantly.
 
-### Features Left to Implement
-
-- *Timed Quizzes*
-  - Future versions of the quiz could include a timer for each question, adding an element of urgency and increasing the challenge.
-  
-- *Leaderboard*
-  - Implementing a leaderboard feature could allow users to compare their scores with others, fostering a competitive environment.
-
-- *Custom Quizzes*
-  - Allow users to create their own quizzes, selecting topics and questions to challenge friends or family members.
-
 ## Testing
 
 The *Capitals of the World* quiz application has undergone thorough testing to ensure that all features work as intended and that the user experience is smooth and error-free.
