@@ -129,6 +129,9 @@ The *Capitals of the World* quiz application was tested using HTML and CSS valid
 - *W3C CSS Validator*: No errors were found.
 ![CSS Test](assets/images/css%20test.PNG)
 
+- *JShint JS Validator*: No warnings were found.
+![JS Test](assets/images/js_test.PNG)
+
 ### Lighthouse Testing
 ![Lighthouse Test](assets/images/lighthouse%20test.PNG)
 
